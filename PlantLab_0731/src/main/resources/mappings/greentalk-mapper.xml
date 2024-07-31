@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="GreentalkDao">
+    <insert id="green_post" parameterType="greentalk">
+        INSERT INTO GREENTALK (
+              MEM_ID
+            , GREEN_CONTENT
+            , GREEN_REG
+            , GREEN_TAG
+        ) VALUES (
+              #{mem_id}
+            , #{green_content}
+            , #{green_reg}
+            , #{green_tag}
+        )
+    </insert>
+
+    <update id="green_modify" parameterType="greentalk">
+        UPDATE SET GREENTALK
+              GREEN_CONTENT = #{green_content}
+            , GREEN_TAG = #{green_tag}
+            , GREEN_MOD = #{green_mod}
+            WHERE GREEN_ID = #{green_id}
+    </update>
+
+    <delete id="green_delete" parameterType="int">
+        DELETE GREENTALK WHERE GREEN_ID = #{ID}
+    </delete>
+
+    <select id="getGreenList" parameterType="map" resultType="greentalk">
+        SELECT G.GREEN_ID
+             , G.GREEN_CONTENT
+             , M.MEM_ID
+             , G.GREEN_REG
+             , G.GREEN_MOD
+             , G.GREEN_TAG
+             , G.GREEN_LIKE_CNT
+             , G.GREEN_BOOKMARK_CNT
+             , M.MEM_PIC
+             , M.MEM_NICKNAME
+        FROM GREENTALK G
+        JOIN MEMBER M ON G.MEM_ID = M.MEM_ID
+        WHERE 1=1
+        <if test="search.searchKeyword != null and search.searchKeyword != ''">
+            <if test="search.searchCondition == 'all'">
+                AND (G.CONTENT LIKE CONCAT('%', #{search.searchKeyword}, '%')
+                OR M.NICKNAME LIKE CONCAT('%', #{search.searchKeyword}, '%'))
+            </if>
+            <if test="search.searchCondition == 'content'">
+                AND G.CONTENT LIKE CONCAT('%', #{search.searchKeyword}, '%')
+            </if>
+            <if test="search.searchCondition == 'writer'">
+                AND M.NICKNAME LIKE CONCAT('%', #{search.searchKeyword}, '%')
+            </if>
+        </if>
+        ORDER BY G.GREEN_ID DESC
+        LIMIT #{cri.amount} OFFSET #{cri.startNum}
+    </select>
+
+    <select id="getPopGreenList" resultType="greentalk">
+        SELECT G.GREEN_ID
+             , G.GREEN_CONTENT
+             , M.MEM_ID
+             , G.GREEN_REG
+             , G.GREEN_MOD
+             , G.GREEN_TAG
+             , G.GREEN_LIKE_CNT
+             , G.GREEN_BOOKMARK_CNT
+             , GP.GREEN_PIC
+             , M.MEM_PIC
+             , M.MEM_NICKNAME
+        FROM GREENTALK G
+        JOIN MEMBER M ON G.MEM_ID = M.MEM_ID
+        JOIN GREENTALK_PIC GP ON G.GREEN_ID = GP.GREEN_ID
+        ORDER BY G.GREEN_LIKE_CNT DESC
+        LIMIT 2
+    </select>
+
+</mapper>

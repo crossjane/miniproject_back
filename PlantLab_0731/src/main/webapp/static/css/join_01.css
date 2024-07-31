@@ -1,0 +1,208 @@
+body {
+    font-family:"Noto Sans KR", sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+.join-container {
+    max-width: 600px;
+    margin: 0 ;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333333;
+}
+
+header .login {
+    text-decoration: none;
+    color: #333333;
+}
+
+main {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+
+}
+
+h2#join-explain {
+    color: #23C961;
+    text-align: left;
+    font-size: 1.875rem;
+    margin-bottom: 90px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+    border-top: #ffffff;
+    border-left: #ffffff;
+    border-right: #ffffff;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+
+/*아이디 중복확인 커스텀인풋*/
+.custom-input,
+.custom-input2,
+.custom-input3,
+.custom-input4
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+}
+.custom-input input[type="text"],
+.custom-input2 input[type="text"],
+.custom-input3 input[type="text"],
+.custom-input4 input[type="text"] {
+    width: calc(80%); /*입력칸과 버튼 사이 여백을 설정*/
+    /* padding-left: 0; */
+    padding-right: 10px; /* 버튼과 입력칸 간의 여백 설정 */
+}
+
+
+.custom-input button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px; /* 버튼의 너비 설정 */
+    height: 100%; /* 입력칸의 높이와 동일하게 설정 */
+    background: url('/static/images/doublecheck_btn.svg') center center no-repeat; /* 이미지 설정 */
+    background-size: contain; /* 이미지 크기 설정 */
+    border: none; /* 버튼 스타일링 */
+    cursor: pointer; /* 마우스 커서 스타일 설정 */
+
+}
+
+.custom-input2 button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px; /* 버튼의 너비 설정 */
+    height: 100%; /* 입력칸의 높이와 동일하게 설정 */
+    background: url('/static/images/join_veri_request.svg') center center no-repeat; /* 이미지 설정 */
+    background-size: contain; /* 이미지 크기 설정 */
+    border: none; /* 버튼 스타일링 */
+    cursor: pointer; /* 마우스 커서 스타일 설정 */
+
+}
+
+.custom-input3 button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px; /* 버튼의 너비 설정 */
+    height: 100%; /* 입력칸의 높이와 동일하게 설정 */
+    background: url('/static/images/join_veri_confirm.svg') center center no-repeat; /* 이미지 설정 */
+    background-size: contain; /* 이미지 크기 설정 */
+    border: none; /* 버튼 스타일링 */
+    cursor: pointer; /* 마우스 커서 스타일 설정 */
+
+}
+
+.custom-input4 button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px; /* 버튼의 너비 설정 */
+    height: 100%; /* 입력칸의 높이와 동일하게 설정 */
+    background: url('/static/images/join_post_search.svg') center center no-repeat; /* 이미지 설정 */
+    background-size: contain; /* 이미지 크기 설정 */
+    border: none; /* 버튼 스타일링 */
+    cursor: pointer; /* 마우스 커서 스타일 설정 */
+
+}
+
+#mem_email{
+    width: 300px;
+}
+
+
+#veriNum{
+    width: 300px;
+}
+
+/*  */
+
+.form-group .check-btn {
+    margin-top: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #C6F1D6;
+    color: #23C961;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.form-group small {
+    margin-top: 5px;
+    color: #33cc33;
+}
+
+.submit-btn {
+    margin-top:46px;
+    height: 3.875rem;
+    width: 25.625rem;
+    font-size: 1.10rem;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border: none;
+    background-color: #23C961;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color:#218838;
+
+}
+
+/* 입력창 아웃라인제거 */
+.container form input {
+    outline: none;
+}

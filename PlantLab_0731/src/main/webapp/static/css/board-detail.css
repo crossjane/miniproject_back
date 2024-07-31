@@ -1,0 +1,215 @@
+.board_button_area {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+
+}
+
+main ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+main li {
+    display: inline-block;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+}
+
+.board_button_area input[type="checkbox"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.board_button_area label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 113px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.activeBlock {
+    color: #27AF5A;
+    border-bottom: 3px solid #27AF5A;
+}
+
+#button {
+    width: 55px;
+    height: 23px;
+    box-sizing: content-box;
+    margin: 1rem;
+    padding: 5px;
+    background: #27AF5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.page_container {
+    position: relative;
+    max-width: 1115px;
+    max-height: max-content;
+    margin: 2em auto;
+    padding: 0 1em;
+    margin-bottom: 100px;
+}
+
+.page_container h5 {
+    border-bottom: 1px solid #D9D9D9;
+    margin:0;
+    margin-top:50px;
+    padding-bottom: 10px; /* 밑줄과 텍스트 사이의 간격 */
+    margin-bottom: 15px; /* h2와 다음 요소 사이의 간격 */
+
+}
+
+.userInfo{
+    display: grid;
+    grid-template-columns: 50px 100px 150px auto 24px 30px 24px 30px;
+    align-items: center;
+}
+
+.userInfo p{
+    margin:0;
+    color: #9F9F9F;
+    font-size: smaller;
+}
+
+.q-contents{
+    padding: 5%;
+    word-break:break-all;
+}
+
+/* 댓글기능 */
+
+.comments {
+    margin-top: 1em;
+}
+
+.comment-list {
+    margin-bottom: 1em;
+    /* border:1px solid #D9D9D9;
+    background-color:#F5F5F5; */
+}
+
+.comment {
+    padding: 0.5em 0;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.comment-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: stretch; /* 세로 방향으로 꽉 차게 정렬 */
+}
+
+
+.input-container {
+    display: flex;
+    align-items: first baseline;
+}
+
+
+
+.input-container textarea.expanded {
+    min-height: 10px; /* 늘어난 높이 설정 */
+}
+
+.input-container textarea  {
+    flex: 1;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 0.5em;
+    resize:none;
+    height: 42px;
+    transition: height 0.2s ease; /* 크기 변경 시 부드럽게 변화 */
+
+}
+
+
+textarea:focus {
+    outline: none;
+}
+
+.comment-input button {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #23C961;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-input button:hover {
+    background-color: #1ea74d;
+}
+
+.comment .time {
+    color: #9F9F9F;
+    margin-left: 10px;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.author-date{
+    margin-bottom: 10px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
+    justify-content: space-between; /* 좌우로 공간을 나눔 */
+    border-bottom: 1px solid #D9D9D9;
+}
+
+
+div.comment{
+    margin: 15px 0;
+    border: 1px solid #ddd; /* 테두리 추가 */
+    padding: 25px; /* 내부 여백 추가 */
+    background-color: #f9f9f9; /* 배경색 추가 */
+}
+
+.profile-image {
+    width: 30px; /* 이미지 크기 조절 */
+    height: 30px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    margin-right: 10px; /* 텍스트와 이미지 간의 간격 */
+    margin-bottom: 5px;
+}
+
+
+.author {
+    margin-right: auto; /* 작성자 이름을 왼쪽으로 정렬 */
+}
+
+.date {
+    margin-left: auto; /* 날짜와 시간을 오른쪽으로 정렬 */
+    text-align: right;
+    white-space: nowrap; /* 날짜와 시간을 한 줄에 표시 */
+}

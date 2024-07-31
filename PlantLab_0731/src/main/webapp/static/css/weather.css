@@ -1,0 +1,35 @@
+#weather {
+    height: 55px;
+    border: solid #23C961 1px;
+    border-radius: 10px;
+    background-color: #EAFFF2;
+    margin-left: 30px;
+}
+
+#weatherList {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#weatherImg {
+    width: 45px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+#weatherLine {
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 80%;
+}
+
+#result {
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #23C961;
+}

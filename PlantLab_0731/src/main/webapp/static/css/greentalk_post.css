@@ -1,0 +1,144 @@
+main {
+    height: 1000px;
+}
+
+/* .hero {
+    background-image: url('');
+    background-size: contain;
+    text-align: center;
+    color: black;
+    padding: 5em 0;
+}
+.hero h1 {
+    margin: 0;
+} 배너 부분 없앰 */
+.container {
+    position: relative;
+    max-width: 1200px;
+    max-height: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+    margin-top: 100px;
+}
+.form-group {
+    margin-bottom: 1em;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group textarea {
+    height: 200px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+.form-group .tag-input {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+.warning {
+    color:red;
+    font-size: 15px;
+}
+
+.uploadBox {
+    background: white;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    height: 600px;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.uploadIcons img {
+    cursor: pointer;
+}
+
+.vid {
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.confirm {
+    display: flex;
+    background: #27af5a;
+    color: white;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+.warning-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 0.5em;
+}
+
+.uploadBtn {
+    display: none;
+}
+
+.confirm-group {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0.5em;
+}
+
+.footer {
+    background-color: #154615;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: #154615;
+}
+
+footer .f_container {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    color: white;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.textarea {
+    resize: none;
+}

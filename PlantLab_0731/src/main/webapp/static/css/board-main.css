@@ -1,0 +1,50 @@
+.board_button_area {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+
+}
+
+main ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+main li {
+    display: inline-block;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+}
+
+.board_button_area input[type="checkbox"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.board_button_area label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 113px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.board_button_area label:hover{
+    color: #27AF5A;
+}
+
+.activeBlock {
+    color: #27AF5A;
+    border-bottom: 3px solid #27AF5A;
+}

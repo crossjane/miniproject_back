@@ -1,0 +1,245 @@
+#header{
+    margin-top:89px;
+}
+
+/* 캐러셀 */
+main{
+
+    margin-top:123px;
+    margin-bottom:236px;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.carousel{
+    max-width:1115px;
+}
+
+.content{
+
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: flex-start;
+
+}
+
+
+/* 테이블 */
+caption{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.table-section{
+    display: grid;
+    grid-template-columns:repeat(2, auto);
+    justify-content: space-between;
+    gap: 10px;
+    width: 1115px;
+    margin-top:100px;
+
+}
+
+
+.table1 {
+    width:552.88px;
+    border-collapse:collapse;
+    margin: 0 auto;
+}
+
+table{
+    width:100%;
+
+}
+
+.table2 {
+    border-collapse:collapse;
+    width:552.88px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-title{
+    background-color: #EDEDED;
+    text-align:left;
+    width:70%;
+
+}
+
+.tablecaption-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:8px;
+}
+
+.tablecaption-container h2{
+    font-weight: bolder;
+    color:#4E4E4E;
+}
+
+
+/* 인기글 제목부분 */
+.section-title{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 160px auto auto;
+    margin-top: 100px;
+    width: 100%;
+
+}
+
+.section-title h2{
+    width:200px;
+
+}
+
+.section-title p{
+
+    font-size:20px;
+    margin:11px 300px 0 10px;
+}
+
+
+
+.morebtn{
+
+    text-decoration-line: underline;
+    font-size: 16px;
+    color:#5F5F5F;
+    border-color: white;
+    background-color: white;
+    border-width: 0;
+    justify-self: end;
+    padding-right:20px;
+
+}
+
+
+
+/* 인기글 */
+
+
+.popular-container{
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 356px 356px 356px;
+    grid-template-rows: 321px 321px;
+    column-gap:24px;
+    row-gap:30px;
+}
+
+.popular-post p img{
+    border-radius: 10px;
+    width:30px;
+    margin-right:10px;
+
+}
+
+.popular-post img{
+    border-radius: 10px;
+}
+
+.contents{
+    margin-top: 15px;
+
+}
+
+
+/* 할인전 제목부분 */
+.section-title2{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 100px auto auto;
+    margin-top: 100px;
+    width: 100%;
+
+}
+
+
+.section-title2 p{
+
+    font-size:20px;
+    margin:11px 0 0 10px;
+}
+
+#morebtn2{
+
+    text-decoration-line: underline;
+    font-size: 16px;
+    color:#5F5F5F;
+    border-color: white;
+    background-color: white;
+    border-width: 0;
+    justify-self: end;
+
+}
+
+/* 할인전 */
+
+
+
+
+.discount-container{
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 641px 451px;
+    grid-template-rows: 328px 328px;
+    column-gap:24px;
+    row-gap:32px;
+}
+
+.discount-title{
+    margin-top: 15px;
+    font-size:22px;
+    color:black;
+    font-weight: bolder;
+}
+
+.shop{
+    font-weight: bolder;
+    font-size: 20px;
+    color:#828282;
+    margin-bottom:2px;
+}
+
+.price-container{
+    display:flex;
+    align-items: center;
+}
+
+.price{
+    font-size:24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    color:#23C961;
+
+
+}
+.discount-price{
+    margin:0;
+    margin-right:13px;
+}
+
+.origin-price{
+    text-decoration-line: line-through;
+    color:lightgray
+
+}
+
+.final-price{
+    color:black;
+    margin-left:5px;
+}
+
+.products img{
+    border-radius: 10px;
+}

@@ -1,0 +1,66 @@
+body {
+    font-family:"Noto Sans KR", sans-serif;
+    background-color: #ffffff;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.join-container {
+    align-items: center;
+    text-align: center;
+}
+
+h2#join-congratulate {
+    color:#23C961;
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+p#join-explain{
+    color:#4E765D;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.submit-login-btn{
+    background-color: #23C961;
+    color: white;
+    font-weight: bolder;
+    width: 14.938rem;
+    height: 3.875rem;
+    border-radius: 5px;
+    border:none;
+    font-size:1.25rem;
+}
+
+.submit-login-btn:hover {
+    background-color: #264D35;
+}
+
+.submit-home-btn:hover {
+    background-color: #264D35;
+}
+
+.join-container img{
+    width: 250px;
+
+}
+
+.submit-home-btn{
+    background-color: #4B8661;
+    color: white;
+    font-weight: bolder;
+    width: 14.938rem;
+    height: 3.875rem;
+    border-radius: 5px;
+    border:none;
+    font-size:1.25rem;
+}

@@ -1,0 +1,150 @@
+
+/*메인 로그인 영역*/
+body {
+    font-family:"Noto Sans KR", sans-serif;
+    box-sizing: content-box;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    font-size: 16px;
+}
+
+
+.container_login {
+
+    margin-top: 150px;
+    text-align: center;
+    width: 25.625rem;
+    margin-bottom:100px;
+
+}
+
+h2#login_eng_name {
+    color:#23C961;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+p#login_kor_name{
+    color:#23C961;
+    font-size:25px;
+    margin-bottom:50px;
+    margin-top:1px;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+}
+
+
+.input-container {
+    margin: 10px 0;
+
+}
+
+.inputbox{
+    border: 0.5px solid #228B22;
+    border-radius: 4px;
+    height: 3.125rem;
+    font-size: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.login{
+    margin-top:1.25rem;
+    margin-bottom: 1.5rem;
+    width: 25.625rem;
+    padding: 10px;
+    background-color: #23C961;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 3.875rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.login:hover {
+    background-color: #218838;
+}
+
+.options {
+    margin: 15px 0;
+    font-size: 1.125rem;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.options ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options li {
+    display: inline-block;
+    list-style: none;
+}
+.options a {
+    color:  #898989;
+    text-decoration: none;
+    margin:0px 20px 10px 20px;
+}
+
+.social-login {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.kakao {
+    background-color: #FDDC3F;
+    border:0.2px solid #A89D9D rgba(253, 220, 63,.8);
+    height: 3.875rem;
+    width: 25.625rem;
+    color:#181600;
+    font-size: 1.10rem;
+
+}
+
+.google {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    height: 3.875rem;
+    width: 25.625rem;
+    color:#181600;
+    font-size: 1.10rem;
+    text-align: left;
+    margin-top: 1.25rem;
+
+
+}
+
+
