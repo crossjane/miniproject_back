@@ -1,0 +1,509 @@
+/* 주화면 */
+header {
+    margin-top: 89px;
+}
+
+.main-container {
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.product-image {
+    flex: 1 1 40%;
+    max-width: 40%;
+}
+
+.product-details {
+    position: relative;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-top: 0px;
+    border: none;
+    margin-left: 30px;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 10px; /* 적절한 값으로 조정 */
+    right: 10px; /* 적절한 값으로 조정 */
+
+}
+
+.button-container button {
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.button-container button:first-of-type {
+    background-color: #23C961;
+    color: white;
+}
+
+.button-container button:last-of-type {
+    background-color: white;
+    color: #23C961;
+    border: 2px solid #23C961;
+}
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 50%;
+}
+
+.product-rating {
+    font-size: 18px;
+    color: #23C961;
+    margin-bottom: -15px;
+}
+
+.purchase-info button {
+    background-color: #23C961;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.purchase-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.quantity_button {
+    display: flex;
+    align-items: center;
+}
+
+.purchase-info label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.purchase-info input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.total-price {
+    font-size: 25px;
+    color: #333;
+    margin-right: 20px;
+}
+
+.purchase-info button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.purchase-info button:hover {
+    background-color: #2980b9;
+}
+
+.discount-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.discount-rate {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.original-price {
+    font-size: 20px;
+    color: gray;
+    text-decoration: line-through;
+    margin-top: -2px;
+    margin-left: 10px;
+}
+
+.final-price {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-top: -8px;
+}
+
+.final-price .currency {
+    font-size: 30px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+
+/* 리뷰 */
+.review-container {
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.discount-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.discount-rate {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.shipping-info {
+    font-size: 16px;
+    color: #777;
+    margin: 5px 0;
+    position: relative;
+    margin-top: 50px;
+}
+
+.sale-period {
+    font-size: 16px;
+    color: #777;
+    margin: 5px 0;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.purchase-info button {
+    background-color: #23C961;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.purchase-info button:hover {
+    background-color: #2980b9;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    border-top: 1px solid #ccc;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.tab-buttons button {
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    color: #777;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-buttons button.active {
+    background-color: #23C961;
+    color: white;
+}
+
+.quantity_button {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+/* 확대모달 */
+.modal-content {
+    display: flex;
+    align-items: center;
+    /* background: transparent; */
+    margin-top: 50%;
+}
+
+
+
+.purchase_introduce {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+/* 사이드바 */
+
+.right-panel {
+    position: fixed;
+    right: -200px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s;
+    z-index: 1;
+}
+
+.right-panel.open {
+    right: 0;
+}
+
+.toggle-button {
+    position: absolute;
+    left: -33.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 70px;
+    background-color: rgb(198, 194, 194);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arrow {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.arrow-left {
+    transform: rotate(135deg);
+}
+
+.toggle-button .arrow.open.arrow-left {
+    transform: rotate(-45deg);
+}
+
+.panel-content {
+    margin-top: 60%;
+    padding: 10px;
+    align-items: center;
+}
+
+.panel-item {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+.panel-item img {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.panel-item.recent-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7.5rem;
+}
+
+.recent-item-viewer {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.recent-item-viewer img {
+    width: 100%;
+    height: auto;
+}
+
+.recent-items-text {
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.top-btn {
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: 68px;
+}
+
+.right-panel {
+    position: fixed;
+    right: -200px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s;
+    z-index: 1;
+}
+
+.right-panel.open {
+    right: 0;
+}
+
+.toggle-button {
+    position: absolute;
+    left: -33.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 70px;
+    background-color: rgb(198, 194, 194);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.arrow {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.arrow-left {
+    transform: rotate(135deg);
+}
+
+.toggle-button .arrow.open.arrow-left {
+    transform: rotate(-45deg);
+}
+
+.panel-content {
+    margin-top: 60%;
+    padding: 10px;
+    align-items: center;
+}
+
+.panel-item {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+.panel-item img {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.panel-item.recent-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7.5rem;
+}
+
+.recent-item-viewer {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.recent-item-viewer img {
+    width: 100%;
+    height: auto;
+}
+
+.recent-items-text {
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.top-btn {
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: 68px;
+}
+
+/* a 링크 스타일 */
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+a.advance_link_style {
+    color: #3e8e41;
+    text-decoration: none;
+}

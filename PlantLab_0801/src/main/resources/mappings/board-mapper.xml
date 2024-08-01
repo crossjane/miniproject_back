@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDao">
+    <insert id="post" parameterType="board">
+        INSERT INTO BOARD (
+              MEM_ID
+            , BOARD_TYPE
+            , BOARD_TITLE
+            , BOARD_CONTENT
+        ) VALUES (
+              #{mem_id}
+            , #{board_type}
+            , #{board_title}
+            , #{board_content}
+        )
+    </insert>
+
+    <update id="modify" parameterType="board">
+        UPDATE SET BOARD
+              BOARD_TYPE = #{board_type}
+            , BOARD_TITLE = #{board_title}
+            , BOARD_CONTENT = #{board_content}
+            , BOARD_MOD = #{board_mod}
+            WHERE BOARD_ID = #{board_id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE BOARD WHERE BOARD_ID = #{ID}
+    </delete>
+
+    <select id="view_popular" parameterType="int" resultType="board">
+        SELECT ROW_NUMBER() OVER (
+                    ORDER BY SUB.BOARD_VIEW_CNT DESC
+<!--                    <choose>-->
+<!--                        <when test="num == 1">-->
+<!--                            ORDER BY B.BOARD_VIEW_CNT DESC-->
+<!--                        </when>-->
+<!--                        <when test="num == 2">-->
+<!--                            ORDER BY B.BOARD_LIKE_CNT DESC-->
+<!--                        </when>-->
+<!--                        <otherwise>-->
+<!--                            ORDER BY B.BOARD_BOOKMARK_CNT DESC-->
+<!--                        </otherwise>-->
+<!--                    </choose>-->
+            ) AS ROW_NUM
+            , SUB.*
+            FROM (
+                SELECT B.BOARD_ID
+                     , B.BOARD_TITLE
+                     , M.MEM_NICKNAME
+                     , B.BOARD_REG
+                     , B.BOARD_VIEW_CNT
+                     , B.BOARD_LIKE_CNT
+                     , B.BOARD_BOOKMARK_CNT
+                    FROM BOARD B
+                    JOIN MEMBER M
+                      ON B.MEM_ID = M.MEM_ID
+                    WHERE BOARD_TYPE = #{tab}
+            ) SUB
+            LIMIT 5
+    </select>
+
+    <select id="view_all" parameterType="int" resultType="board">
+        SELECT ROW_NUMBER() OVER (
+                    ORDER BY SUB.BOARD_REG DESC
+            ) AS ROW_NUM
+            , SUB.*
+            FROM (
+                SELECT B.BOARD_ID
+                     , B.BOARD_TITLE
+                     , M.MEM_NICKNAME
+                     , B.BOARD_REG
+                     , B.BOARD_VIEW_CNT
+                     , B.BOARD_LIKE_CNT
+                     , B.BOARD_BOOKMARK_CNT
+                    FROM BOARD B
+                    JOIN MEMBER M
+                      ON B.MEM_ID = M.MEM_ID
+                    WHERE BOARD_TYPE = #{tab}
+            ) SUB
+        LIMIT 10
+    </select>
+
+    <select id="view_one" parameterType="int" resultType="board">
+        SELECT B.BOARD_TITLE
+             , M.MEM_NICKNAME
+             , B.BOARD_REG
+             , B.BOARD_MOD
+             , B.BOARD_LIKE_CNT
+             , B.BOARD_BOOKMARK_CNT
+             , B.BOARD_CONTENT
+             , B.BOARD_TYPE
+        FROM BOARD B
+        JOIN MEMBER M
+          ON B.MEM_ID = M.MEM_ID
+        WHERE B.BOARD_ID = ${id}
+    </select>
+
+    <select id="getBoard" parameterType="int" resultType="board">
+        SELECT AA.*
+        FROM (SELECT B.BOARD_TITLE
+                   , B.BOARD_REG
+                   , M.MEM_NICKNAME
+                   , B.BOARD_TYPE
+                   , ROW_NUMBER() over (PARTITION BY B.BOARD_TYPE ORDER BY BOARD_TYPE ASC, BOARD_ID ASC) AS num
+              FROM BOARD B
+                       JOIN MEMBER M
+                            ON B.MEM_ID = M.MEM_ID
+              WHERE B.MEM_ID = #{mem_id}) AA
+        WHERE AA.NUM &lt;= 3;
+    </select>
+
+    <update id="update_view_cnt" parameterType="int">
+        UPDATE BOARD
+            SET
+                BOARD_VIEW_CNT = BOARD_VIEW_CNT + 1
+            WHERE BOARD_ID = ${id}
+    </update>
+
+    <select id="getBoardTotal" parameterType="int" resultType="int">
+        SELECT COUNT(*)
+            FROM BOARD B
+            JOIN MEMBER M
+              ON B.MEM_ID = M.MEM_ID
+            WHERE BOARD_TYPE = #{tab}
+    </select>
+</mapper>
